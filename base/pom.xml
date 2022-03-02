@@ -23,7 +23,7 @@
     <parent>
         <groupId>io.confluent</groupId>
         <artifactId>common-docker</artifactId>
-        <version>7.2.0-0</version>
+        <version>7.0.1</version>
     </parent>
 
     <packaging>pom</packaging>
@@ -64,6 +64,7 @@
             <groupId>org.jolokia</groupId>
             <artifactId>jolokia-jvm</artifactId>
             <version>${jolokia-jvm.version}</version>
+            <classifier>agent</classifier>
         </dependency>
 
         <dependency>

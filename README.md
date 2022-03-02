@@ -18,9 +18,15 @@ export DOCKER_HOST=tcp://127.0.0.1:2375
 
 # Build the base image
 
-1. Get the base image
+1. Get the base image (only the first time)
 ```shell
-git subtree add --prefix common-docker 
+
+## Set up the subtree initially.
+git subtree add --prefix docker-common https://github.com/confluentinc/common-docker.git master --squash
+
+## Pull newer versions
+git subtree pull --prefix docker-common https://github.com/confluentinc/common-docker.git master --squash
+  
 ```
 
 2. Add the confluent repository to the `pom.xml` file

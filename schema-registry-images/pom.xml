@@ -25,6 +25,13 @@
         <version>7.0.1</version>
     </parent>
 
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <url>https://packages.confluent.io/maven/</url>
+        </repository>
+    </repositories>
+
     <groupId>io.confluent.schema-registry-images</groupId>
     <artifactId>schema-registry-images-parent</artifactId>
     <packaging>pom</packaging>

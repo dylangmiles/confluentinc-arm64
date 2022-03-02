@@ -103,7 +103,17 @@ git subtree pull --prefix schema-registry-images https://github.com/confluentinc
   
 ```
 
-6. Build the schema-registry-images
+2. Add the confluent repository to the `schema-registry-images/pom.xml` file
+
+```xml
+<repositories>
+    <repository>
+        <id>confluent</id>
+        <url>https://packages.confluent.io/maven/</url>
+    </repository>
+</repositories>
+
+3. Build the schema-registry-images
 ```shell
 cd schema-registry-images
 mvn clean package \

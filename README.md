@@ -66,7 +66,18 @@ git subtree pull --prefix kafka-images https://github.com/confluentinc/kafka-ima
   
 ```
 
-6. Build the kafka-images 
+2. Add the confluent repository to the `kafka-images/pom.xml` file
+
+```xml
+<repositories>
+     <repository>
+         <id>confluent</id>
+         <url>https://packages.confluent.io/maven/</url>
+     </repository>
+ </repositories>
+```
+
+3. Build the kafka-images 
 ```shell
 cd kafka-images
 mvn clean package \

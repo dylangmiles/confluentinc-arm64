@@ -29,7 +29,8 @@ git subtree pull --prefix docker-common https://github.com/confluentinc/common-d
   
 ```
 
-2. Add the confluent repository to the `pom.xml` file
+2. Add the confluent repository to the `docker-common/pom.xml` file
+
 ```xml
 <repositories>
      <repository>
@@ -43,6 +44,7 @@ git subtree pull --prefix docker-common https://github.com/confluentinc/common-d
 5. Change the property ubi.zulu.openjdk.version in the pom.xml to 11.0.14 (check the website for the latest version)
 6. Build the image
 ```shell
+cd docker-common
 mvn clean package \
   -DskipTests -Pdocker \
   -Ddocker.registry=nxt/

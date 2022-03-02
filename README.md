@@ -25,10 +25,10 @@ export DOCKER_HOST=tcp://127.0.0.1:2375
 ```shell
 
 ## Set up the subtree initially.
-git subtree add --prefix docker-common https://github.com/confluentinc/common-docker.git tags/v7.0.1 --squash
+git subtree add --prefix docker-common https://github.com/confluentinc/common-docker.git tags/v7.0.2 --squash
 
 ## Pull newer versions
-git subtree pull --prefix docker-common https://github.com/confluentinc/common-docker.git tags/v7.0.1 --squash
+git subtree pull --prefix docker-common https://github.com/confluentinc/common-docker.git tags/v7.0.2 --squash
   
 ```
 
@@ -59,10 +59,10 @@ mvn clean package \
 ```shell
 
 ## Set up the subtree initially.
-git subtree add --prefix kafka-images https://github.com/confluentinc/kafka-images tags/v7.0.1 --squash
+git subtree add --prefix kafka-images https://github.com/confluentinc/kafka-images tags/v7.0.2 --squash
 
 ## Pull newer versions
-git subtree pull --prefix kafka-images https://github.com/confluentinc/kafka-images tags/v7.0.1 --squash
+git subtree pull --prefix kafka-images https://github.com/confluentinc/kafka-images tags/v7.0.2 --squash
   
 ```
 
@@ -83,7 +83,7 @@ cd kafka-images
 mvn clean package \
   -DskipTests -Pdocker \
   -DCONFLUENT_PACKAGES_REPO='https://packages.confluent.io/rpm/7.0' \
-  -DCONFLUENT_VERSION=7.0.1 \
+  -DCONFLUENT_VERSION=7.0.2 \
   -Ddocker.registry=nxt/
 ```
 
@@ -96,10 +96,10 @@ https://nxt.engineering/blog/kafka-docker-image/
 ```shell
 
 ## Set up the subtree initially.
-git subtree add --prefix schema-registry-images https://github.com/confluentinc/schema-registry-images tags/v7.0.1 --squash
+git subtree add --prefix schema-registry-images https://github.com/confluentinc/schema-registry-images tags/v7.0.2 --squash
 
 ## Pull newer versions
-git subtree pull --prefix schema-registry-images https://github.com/confluentinc/schema-registry-images tags/v7.0.1 --squash
+git subtree pull --prefix schema-registry-images https://github.com/confluentinc/schema-registry-images tags/v7.0.2 --squash
   
 ```
 
@@ -112,6 +112,7 @@ git subtree pull --prefix schema-registry-images https://github.com/confluentinc
         <url>https://packages.confluent.io/maven/</url>
     </repository>
 </repositories>
+```
 
 3. Build the schema-registry-images
 ```shell
@@ -119,7 +120,7 @@ cd schema-registry-images
 mvn clean package \
   -DskipTests -Pdocker \
   -DCONFLUENT_PACKAGES_REPO='https://packages.confluent.io/rpm/7.0' \
-  -DCONFLUENT_VERSION=7.0.1 \
+  -DCONFLUENT_VERSION=7.0.2 \
   -Ddocker.registry=nxt/
 ```
 
